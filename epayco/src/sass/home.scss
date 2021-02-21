@@ -25,6 +25,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media(max-width: 900px){
+        flex-direction: column;
+    }
     .field-container {
       display: flex;
       flex-direction: column;
@@ -50,9 +53,7 @@
       select {
         @extend ._input;
         outline: none;
-      }
-      select::-ms-expand {
-        display: none;
+        margin: 0 0 38px;
       }
     }
   }

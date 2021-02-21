@@ -9,6 +9,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: row;
+  background: $gray4;
 }
 
 .sidebar-container {
@@ -19,46 +20,75 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .logo {
-    margin: 19px auto 28px;
+  @media (max-width: 699px) {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 1;
+    transition: left 0.3s linear;
   }
-  .user-name {
-    background: $gray5;
-    border: 1px solid $black;
-    border-radius: 5px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    width: 87%;
-    height: 30px;
-    margin-bottom: 28px;
-    p {
-      width: 90%;
-      margin: 3px auto;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-      @extend ._label2;
-      color: $white;
-      -webkit-text-stroke: 1px $black;
-    }
+  &.show-sidebar {
+    left: 0;
+    transition: left 0.3s linear;
   }
-  .section {
-    width: 87%;
+  .inner {
+    width: 90%;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     align-items: center;
-    margin: 0 0 23px;
-    cursor: pointer;
-
-    img {
-      margin: 0 16px 0 0;
+    .logo {
+      margin: 19px auto 28px;
     }
-    p {
+    .user-name {
+      background: $gray5;
+      border: 1px solid $black;
+      border-radius: 5px;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      width: 87%;
+      height: 30px;
+      margin-bottom: 28px;
+      p {
+        width: 100%;
+        margin: 3px auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        @extend ._label2;
+        color: $white;
+      }
+    }
+    .section {
+      width: 87%;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 0 23px;
+      cursor: pointer;
+
+      img {
+        margin: 0 16px 0 0;
+      }
+      p {
         @extend ._section;
         color: $white;
         margin: 0;
+      }
+    }
+    .back {
+      display: none;
+      @media (max-width: 700px) {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        bottom: 12px;
+        right: 0;
+      }
     }
   }
 }
@@ -67,6 +97,14 @@ body {
   width: 100%;
   height: 72px;
   background: $white;
+
+  img {
+    cursor: pointer;
+    padding: 30px;
+    @media (min-width: 700px) {
+      display: none;
+    }
+  }
 }
 
 .content {
@@ -75,6 +113,9 @@ body {
   flex-direction: column;
   background: $gray1;
   position: relative;
+  @media (max-width: 699px) {
+    width: 100%;
+  }
 }
 
 .footer-container {
@@ -84,18 +125,20 @@ body {
   align-items: center;
   justify-content: space-between;
   background: $white;
-
-  .text{
+  @media (max-width: 699px) {
+    height: 90px;
+  }
+  .text {
     @extend ._comment2;
     color: $gray6;
     margin-left: 19px;
   }
 
-  .logos-container{
-    img:nth-child(1){
+  .logos-container {
+    img:nth-child(1) {
       padding-bottom: 4px;
     }
-    img:nth-child(2){
+    img:nth-child(2) {
       margin: 0 20px 0 15px;
     }
   }

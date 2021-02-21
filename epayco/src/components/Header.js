@@ -1,12 +1,21 @@
 import React from "react";
+import iconMenu from "../imgs/icon-menu.svg";
 
 const Header = () => {
 
-    return(
-        <div className="header-container">
+  const handleSidebar = () => {
+    let sidebar = document.getElementById("sidebar");
+    if (sidebar.classList[1]) {
+      return sidebar.classList.remove("show-sidebar");
+    }
+    return sidebar.classList.add("show-sidebar");
+  };
 
-        </div>
-    )
-}
+  return (
+    <div className="header-container">
+      <img src={iconMenu} onClick={handleSidebar} />
+    </div>
+  );
+};
 
 export default Header;

@@ -11,12 +11,15 @@ const Home = () => {
   const [country, setCountry] = useState("");
   const [document, setDocument] = useState("");
   const [modal, setModal] = useState(false);
-  const [success, setSucces] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name && surname && country && document) {
-      setSucces(true);
+      setSuccess(true);
+    }
+    else{
+      setSuccess(false)
     }
     setModal(true);
   };
@@ -41,7 +44,6 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      {console.log(name, surname, country, document)}
       <p className="title">Información del formulario</p>
       <p className="subtitle">
         Ingrese el título y la descripción que visualizarán los usuarios durante

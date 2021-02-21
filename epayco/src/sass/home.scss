@@ -30,9 +30,15 @@
             flex-direction: column;
             width: 45%;
             label{
+                display: flex;
+                flex-direction: row;
                 @extend ._label;
                 color: $black;
                 margin: 0 0 13px;
+                p{
+                    margin: 0 0 0 3px;
+                    color: red;
+                }
             }
 
             input{

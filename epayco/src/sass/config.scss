@@ -1,3 +1,4 @@
+$gray6: #212529;
 $gray5: #3a3a3a;
 $gray4: #4b4b50;
 $gray3: #999999;
@@ -52,10 +53,15 @@ $black: #000000;
   font-size: 20px;
 }
 
-._coment {
+._comment {
   font-family: Roboto;
   font-size: 24px;
   font-weight: 400;
+}
+
+._comment2 {
+  font-family: Segoe UI;
+  font-size: 14px;
 }
 
 ._dark-btn {

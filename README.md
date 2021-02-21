@@ -1,5 +1,3 @@
-# ePayco
-
 # Desafío técnico ePayco
 
 Este proyecto desarrollado con ReactJS consistió en desarrollar un header, sidebar, footer y contenido basado en un diseño provisto en Figma.

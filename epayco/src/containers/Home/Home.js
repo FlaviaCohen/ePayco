@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Modal from "react-modal";
-import FormModal from "../../components/FormModal.js"
+import FormModal from "../../components/FormModal.js";
 import "../../sass/home.scss";
 
 const Home = () => {
@@ -94,10 +94,12 @@ const Home = () => {
       </form>
       <Modal
         isOpen={modal}
-        success={success}
-        /* className="abono-modal"
-        overlayClassName="overlay" */
-      />
+        onRequestClose={()=> setModal(false)}
+        //className="form-modal"
+        overlayClassName="custom-overlay"
+      >
+        <FormModal success={success} setModal={setModal}/>
+      </Modal>
     </div>
   );
 };

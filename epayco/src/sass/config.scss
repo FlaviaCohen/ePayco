@@ -57,6 +57,7 @@ $black: #000000;
   font-family: Roboto;
   font-size: 24px;
   font-weight: 400;
+  text-align: center;
 }
 
 ._comment2 {
@@ -104,6 +105,7 @@ $black: #000000;
 
 ._input {
   background: white;
+  min-width: 210px;
   height: 45px;
   border: 1px solid $gray2;
   border-radius: 5px;

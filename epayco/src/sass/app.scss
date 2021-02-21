@@ -58,6 +58,7 @@ body {
     p {
         @extend ._section;
         color: $white;
+        margin: 0;
     }
   }
 }

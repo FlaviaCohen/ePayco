@@ -18,7 +18,7 @@ const Home = () => {
     if (name && surname && country && document) {
       setSucces(true);
     }
-    setModal(false);
+    setModal(true);
   };
 
   const handleName = (e) => {

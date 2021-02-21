@@ -23,11 +23,11 @@ Ingresar a [http://localhost:3000](http://localhost:3000)
 
 ## Herramientas utilizadas
 
-HTML
-CSS3
-Sass
-Javascript
-ReactJS
-React Hooks
-Figma
-Librería: react-modal
+HTML,
+CSS3,
+Sass,
+Javascript,
+ReactJS,
+React Hooks,
+Figma,
+react-modal (librería)

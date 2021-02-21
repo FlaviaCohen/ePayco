@@ -18,7 +18,7 @@ const Home = () => {
     if (name && surname && country && document) {
       setSucces(true);
     }
-    setModal(true);
+    setModal(false);
   };
 
   const handleName = (e) => {
@@ -41,6 +41,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      {console.log(name, surname, country, document)}
       <p className="title">Información del formulario</p>
       <p className="subtitle">
         Ingrese el título y la descripción que visualizarán los usuarios durante

@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <p className="title">Información del formulario</p>
-      <p>
+      <p className="subtitle">
         Ingrese el título y la descripción que visualizarán los usuarios durante
         el proceso de pago
       </p>
@@ -40,8 +40,8 @@ const Home = () => {
           </div>
         </div>
         <div className="btns">
-          <button>Enviar</button>
-          <button>Cancelar</button>
+          <button className="send-btn"><p>enviar</p></button>
+          <button className="cancel-btn"><p>Cancelar</p></button>
         </div>
       </form>
     </div>

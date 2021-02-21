@@ -1,0 +1,67 @@
+@import "./config.scss";
+
+.title{
+    @extend ._title;
+    width: 72%;
+    margin: 43px 24px 19px;
+    padding: 0 0 19px 24px;
+    border-bottom: 1px solid $gray2;
+    color: $black;
+}
+
+.subtitle{
+    @extend ._subtitle;
+    color: $gray3;
+    margin: 0 47px 43px;
+}
+
+.form{
+    width: 66%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 47px;
+
+    .row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .field-container{
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            label{
+                @extend ._label;
+                color: $black;
+                margin: 0 0 13px;
+            }
+
+            input{
+                @extend ._input;
+                width: 100%;
+                margin: 0 0 38px;
+            }
+
+            select{
+                @extend ._input;
+                outline: none;
+            }
+            select::-ms-expand {
+                display: none;
+            }
+        }
+    }
+
+    .btns{
+        display: flex;
+        .send-btn{
+            @extend ._dark-btn;
+            margin: 38px 40px 34px 0;
+        }
+        .cancel-btn{
+            @extend ._light-btn;
+            margin: 38px 0 34px;
+
+        }
+
+    }
+}

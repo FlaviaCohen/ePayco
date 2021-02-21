@@ -1,0 +1,122 @@
+@import "./config.scss";
+
+.title {
+  @extend ._title;
+  width: 72%;
+  margin: 43px 24px 19px;
+  padding: 0 0 19px 24px;
+  border-bottom: 1px solid $gray2;
+  color: $black;
+}
+
+.subtitle {
+  @extend ._subtitle;
+  color: $gray3;
+  margin: 0 47px 43px;
+}
+
+.form {
+  width: 66%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 47px;
+
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 900px){
+        flex-direction: column;
+    }
+    .field-container {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+      label {
+        display: flex;
+        flex-direction: row;
+        @extend ._label;
+        color: $black;
+        margin: 0 0 13px;
+        p {
+          margin: 0 0 0 3px;
+          color: red;
+        }
+      }
+
+      input {
+        @extend ._input;
+        width: 100%;
+        margin: 0 0 38px;
+      }
+
+      select {
+        @extend ._input;
+        outline: none;
+        margin: 0 0 38px;
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    .send-btn {
+      @extend ._dark-btn;
+      margin: 38px 40px 34px 0;
+    }
+    .cancel-btn {
+      @extend ._light-btn;
+      margin: 38px 0 34px;
+    }
+  }
+}
+
+.ReactModalPortal {
+  .ReactModal__Overlay.ReactModal__Overlay--after-open.custom-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .ReactModal__Content.ReactModal__Content--after-open {
+      position: relative;
+      width: 26%;
+      min-width: 383px;
+      height: 290px;
+      inset: unset !important;
+      outline: none;
+      border: none;
+      padding: 0 !important;
+      .modal-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+          .icon-close{
+              position: absolute; 
+              top: 20px;
+              right: 20px;
+              cursor: pointer;
+          }
+          .icon-status{
+              margin: 20px auto 30px;
+          }
+          .comment{
+            @extend ._comment;
+            max-width: 227px;
+            margin: 0 auto 54px;
+            color: rgba(0, 0, 0, 0.54);
+          }
+          button{
+              @extend ._dark-btn;
+              width: 70%;
+              outline: none;
+          }
+      }
+    }
+  }
+}

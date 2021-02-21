@@ -1,0 +1,43 @@
+@import "./config.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body{
+    margin: 0;
+}
+
+
+.app{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar-container{
+    height: 100vh;
+    width: 16%;
+    min-width: 240px;
+    background: $gray3
+}
+
+.header-container{
+    width: 100%;
+    height: 72px;
+    background: $white;
+}
+
+.content{
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    background: $gray1;
+    position: relative;
+}
+
+.footer-container{
+    width: 100%;
+    height: 49px;
+    background: $white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
